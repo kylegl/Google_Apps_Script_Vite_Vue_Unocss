@@ -1,4 +1,4 @@
-# google_apps_script_web_app_template
+# Google Apps Script Vue 3 Uno Css Template
 This template makes it possible to use vite, vue3, & unocss in a Google Apps Script project. This uses vite for its quick dev environment and then leverages Parcel to bundle the project down to a single html file so that it works with Apps Script.
 
 You need clasp & pnpm installed on your machine for this project.
@@ -14,8 +14,7 @@ npm install -g pnpm
 npm install @google/clasp -g
 ```
 
-
-##Setup Google Apps Script Project
+## Setup Google Apps Script Project
 create new script project in your google drive
 
 In the Code.gs file add 
@@ -36,7 +35,7 @@ Get the test deployment url. Click Deploy > Test deployments. Save url for later
 
 Get script id. Click the setting cog and copy the Script ID.
 
-##Setup local files
+## Setup local files
 Clone this project
 
 Login to google through clasp. From the command line enter:
