@@ -7,3 +7,11 @@ dist-ssr
 node_modules
 .idea/
 *.log
+.clasp.json
+.parcel-cache
+appsscript.json
+.appscript/*
+.appscript
+.parcel/*
+.parcel
+*.json

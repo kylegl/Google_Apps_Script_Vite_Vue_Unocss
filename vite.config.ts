@@ -7,6 +7,7 @@ import Pages from 'vite-plugin-pages'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'
+import { viteSingleFile } from './single_file'
 
 export default defineConfig({
   resolve: {
@@ -14,21 +15,11 @@ export default defineConfig({
       '~/': `${path.resolve(__dirname, 'src')}/`,
     },
   },
-  build: {
-    minify: false,
-    sourcemap: false,
-    polyfillModulePreload: false,
-    rollupOptions: {
-      output: {
-        manualChunks: undefined,
-      },
-    }
-  },
   plugins: [
     Vue({
       reactivityTransform: true,
     }),
-
+    viteSingleFile(),
     // https://github.com/hannoeru/vite-plugin-pages
     Pages(),
 
