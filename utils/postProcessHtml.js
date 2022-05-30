@@ -44,6 +44,3 @@ const serverDir = './server'
 const localServerFiles = fs.readdirSync(path.resolve(serverDir))
 
 localServerFiles.forEach(file => fs.copyFileSync(path.resolve(serverDir, file), path.resolve(outputDir, file)))
-
-// TODO replace function needs work
-
