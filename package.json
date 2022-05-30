@@ -2,7 +2,7 @@
   "private": true,
   "packageManager": "pnpm@7.1.5",
   "scripts": {
-    "build": "vite build",
+    "build": "vite build && node utils/postProcessHtml.js && clasp push",
     "dev": "vite --port 3333 --open",
     "lint": "eslint .",
     "typecheck": "vue-tsc --noEmit",

@@ -19,7 +19,10 @@ export default defineConfig({
     Vue({
       reactivityTransform: true,
     }),
-    viteSingleFile(),
+    // https://github.com/antfu/unocss
+    // see unocss.config.ts for config
+    Unocss(),
+    
     // https://github.com/hannoeru/vite-plugin-pages
     Pages(),
 
@@ -43,9 +46,7 @@ export default defineConfig({
       dts: true,
     }),
 
-    // https://github.com/antfu/unocss
-    // see unocss.config.ts for config
-    Unocss(),
+    viteSingleFile(),
   ],
 
   // https://github.com/vitest-dev/vitest

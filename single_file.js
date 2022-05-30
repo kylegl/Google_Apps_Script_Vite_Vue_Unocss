@@ -24,7 +24,7 @@ export function viteSingleFile({
             const reScript = new RegExp(
               `<script type="module"[^>]*?src="[\./]*${o.fileName}"[^>]*?></script>`,
             )
-            const code = `<script type="module">\n//${o.fileName}\n${o.code}\n</script>`
+            const code = '<script type="module">\nINSERT_JS\n</script>'
             const inlined = html.replace(reScript, _ => code)
             html = removeViteModuleLoader
               ? _removeViteModuleLoader(inlined)
@@ -34,7 +34,7 @@ export function viteSingleFile({
             const reCSS = new RegExp(
               `<link rel="stylesheet"[^>]*?href="[\./]*${a.fileName}"[^>]*?>`,
             )
-            const code = `<style type="text/css">\n${a.source}\n</style>`
+            const code = '<style type="text/css">\n INSERT_CSS \n</style>'
             html = html.replace(reCSS, _ => code)
           }
           else {
